@@ -13,7 +13,7 @@ const calculateMoney = (inputID, badgeID, title) => {
 
   const date = new Date();
 
-  if (inputValue == '' || !isNumeric) {
+  if (inputValue == '' || !isNumeric || !taka) {
     fail_modal.showModal();
   } else if (totalBdt - taka < 0) {
     fail_modal2.showModal();
