@@ -42,7 +42,9 @@
           <div class="navbar">
             <div class="navbar-start">
               <div class="dropdown">
-                <button class="btn bg-[#b4f461] px-8 text-lg">Blog</button>
+                <button onclick="blog()" class="btn bg-[#b4f461] px-8 text-lg">
+                  Blog
+                </button>
               </div>
             </div>
             <div class="hidden md:flex navbar-center">
@@ -215,6 +217,98 @@
                   Donate Now
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- QnA  -->
+      <section id="blogs" class="hidden">
+        <div class="w-9/12 mx-auto space-y-5">
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-2xl font-extrabold">
+              What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content">
+              <p class="text-gray-500">
+                The Document Object Model (DOM) is a way to represent a web page
+                in a structured way. It organizes the page as a tree with
+                different parts, like text, images, and components. Using the
+                DOM, we can change the content, style, and structure of the web
+                page with programming languages like JavaScript. It is like a
+                bridge between JavaScript and HTML.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-2xl font-extrabold">
+              How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+              <p class="text-gray-500">
+                T select an element from the DOM, we can use many JavaScript
+                methods like:
+                <br />
+                1. getElementById(): Selects an element by its ID.
+                <br />
+                2. getElementsByClassName(): Selects all elements with a
+                specific class name.
+                <br />
+                3.getElementsByTagName(): Selects all elements with a specific
+                tag name (like p, div, etc.).
+                <br />
+                4. querySelector(): Selects the first element that matches a CSS
+                selector.
+                <br />
+                5. querySelectorAll(): Selects all elements that match a CSS
+                selector.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-2xl font-extrabold">
+              What is event delegation in the context of the DOM, and why is it
+              useful?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Event delegation is a technique in the DOM where we add a single
+                event listener to a parent element instead of adding it to many
+                child elements. This works because events "bubble up" from the
+                child elements to the parent.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-2xl font-extrabold">
+              How do you manipulate an element's attributes and styles using the
+              DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                You can manipulate an element's attributes and styles using the
+                DOM with JavaScript in several ways.
+                <br />
+                1. Use setAttribute(name, value) to change/add an attribute
+                (emample: element.setAttribute("src", "image.jpg")).
+                <br />
+                2. Use getAttribute(name) to get an attribute's value (emample:
+                const value = element.getAttribute("src")).
+                <br />
+                3. Use removeAttribute(name) to remove an attribute (emample:
+                element.removeAttribute("class")).
+                <br />
+                4. Set properties directly (emample: element.id = "newID").
+                <br />
+                5. Use the style property for inline CSS (emample:
+                element.style.color = "red"). Manage CSS Classes: Use classList
+                to add (element.classList.add("active")), remove
+                (element.classList.remove("hidden")), or toggle
+                (element.classList.toggle("highlight")) classes.
+              </p>
             </div>
           </div>
         </div>

@@ -38,13 +38,21 @@ getItem('donation-btn').addEventListener('click', () => {
   getItem('donation-btn').classList.add('active');
   getItem('donation').classList.remove('hidden');
   getItem('history').classList.add('hidden');
+  getItem('blogs').classList.add('hidden');
 });
 getItem('history-btn').addEventListener('click', () => {
   getItem('history-btn').classList.add('active');
   getItem('donation-btn').classList.remove('active');
   getItem('history').classList.remove('hidden');
   getItem('donation').classList.add('hidden');
+  getItem('blogs').classList.add('hidden');
 });
+
+const blog = () => {
+  getItem('history').classList.add('hidden');
+  getItem('donation').classList.add('hidden');
+  getItem('blogs').classList.remove('hidden');
+};
 
 getItem('donate-now-1').addEventListener('click', () => {
   calculateMoney('one-input', 'one-bdt', 'title1');
