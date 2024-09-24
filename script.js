@@ -2,13 +2,16 @@ const getItem = (id) => {
   return document.getElementById(id);
 };
 
-const calculateMoney = (inputID, badgeID) => {
+const calculateMoney = (inputID, badgeID, title) => {
+  const cardTitle = getItem(title).innerText;
   const inputValue = getItem(inputID).value;
   const isNumeric = /^[0-9]+$/.test(inputValue);
 
   const taka = parseInt(inputValue);
   const bdt = parseInt(getItem(badgeID).innerText);
   const totalBdt = parseInt(getItem('total-bdt').innerText);
+
+  const date = new Date();
 
   if (inputValue == '' || !isNumeric) {
     fail_modal.showModal();
@@ -17,7 +20,14 @@ const calculateMoney = (inputID, badgeID) => {
   } else {
     getItem(badgeID).innerText = bdt + taka;
     getItem('total-bdt').innerText = totalBdt - taka;
-
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <div class="border p-10 rounded-2xl">
+          <h1 class="text-2xl font-extrabold">${taka} Taka is donated for ${cardTitle}</h1>
+          <p class="text-gray-500 mt-2">Date: ${date}</p>
+        </div>
+    `;
+    getItem('history').appendChild(div);
     success_modal.showModal();
   }
   getItem(inputID).value = '';
@@ -37,12 +47,11 @@ getItem('history-btn').addEventListener('click', () => {
 });
 
 getItem('donate-now-1').addEventListener('click', () => {
-  calculateMoney('one-input', 'one-bdt');
+  calculateMoney('one-input', 'one-bdt', 'title1');
 });
 getItem('donate-now-2').addEventListener('click', () => {
-  s;
-  calculateMoney('two-input', 'two-bdt');
+  calculateMoney('two-input', 'two-bdt', 'title2');
 });
 getItem('donate-now-3').addEventListener('click', () => {
-  calculateMoney('three-input', 'three-bdt');
+  calculateMoney('three-input', 'three-bdt', 'title3');
 });

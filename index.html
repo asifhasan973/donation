@@ -28,7 +28,9 @@
     </style>
   </head>
   <body class="lexend">
-    <header class="pb-16">
+    <header
+      class="sticky top-0 z-50 bg-opacity-90 bg-white pb-6 border-b-2 mb-10"
+    >
       <div class="bg-[#f9f7f3] pb-5 pt-3">
         <nav class="w-11/12 mx-auto">
           <div class="flex md:hidden mb-6 justify-center items-center">
@@ -61,7 +63,7 @@
           </div>
         </nav>
       </div>
-      <div class="flex justify-center items-center mt-16 gap-10">
+      <div class="flex justify-center items-center mt-6 gap-10">
         <button
           id="donation-btn"
           class="btn md:px-10 btn-outline active hover:bg-[#b4f461] hover:border-0 hover:text-black"
@@ -76,10 +78,8 @@
         </button>
       </div>
     </header>
-    <main class="w-11/12 mx-auto">
-      <section class="hidden" id="history">
-        <h1>kjhwjdhiwwod</h1>
-      </section>
+    <main class="w-11/12 mx-auto mb-10">
+      <section class="hidden space-y-7" id="history"></section>
       <section id="donation" class="space-y-16">
         <!-- card -1  -->
         <div class="card lg:card-side border">
@@ -95,7 +95,7 @@
                 </p>
               </span>
             </div>
-            <h2 class="card-title text-4xl">
+            <h2 id="title1" class="card-title text-4xl">
               Donate for Flood at Noakhali, Bangladesh
             </h2>
             <p class="text-gray-500">
@@ -139,7 +139,7 @@
                 </p>
               </span>
             </div>
-            <h2 class="card-title text-4xl">
+            <h2 id="title2" class="card-title text-4xl">
               Donate for Flood Relief in Feni,Bangladesh
             </h2>
             <p class="text-gray-500">
@@ -185,7 +185,7 @@
                 </p>
               </span>
             </div>
-            <h2 class="card-title text-4xl">
+            <h2 id="title3" class="card-title text-4xl">
               Aid for Injured in the Quota Movement
             </h2>
             <p class="text-gray-500">
